@@ -11,7 +11,7 @@ jobs:
       - name: Dump default branch
         run: echo '${{ github.event.repository.master_branch }}'
       - name: Check push branch is default branch
-        run: echo '${{ github.ref == format('refs/heads/{0}', github.event.repository.master_branch }}'
+        run: echo '${{ github.ref == format('refs/heads/{0}', github.event.repository.master_branch) }}'
       - name: Default Branch Conditional
         if: github.ref == format('refs/heads/{0}', github.event.repository.master_branch
         run: echo 'This is the default branch.'
