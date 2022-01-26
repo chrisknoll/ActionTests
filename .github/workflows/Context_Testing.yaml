@@ -9,4 +9,4 @@ jobs:
         id: github_context_step
         run: echo '${{ toJSON(github) }}'
       - name: Dump default branch
-        run: echo '${{ github.event.repo.default_branch }}'
+        run: echo '${{ github.event.repository.master_branch }}'
